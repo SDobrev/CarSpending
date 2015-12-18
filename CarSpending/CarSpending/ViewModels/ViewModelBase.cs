@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarSpending.ViewModels
+﻿namespace CarSpending.ViewModels
 {
-  public class ViewModelBase : INotifyPropertyChanged
-  {
-    public event PropertyChangedEventHandler PropertyChanged;
+    using System.ComponentModel;
 
-    protected void RaisePropertyChanged(string propertyName)
+    public class ViewModelBase : INotifyPropertyChanged
     {
-      if (this.PropertyChanged == null)
-      {
-        return;
-      }
+        public event PropertyChangedEventHandler PropertyChanged;
 
-      this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            if (this.PropertyChanged == null)
+            {
+                return;
+            }
+
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
-  }
 }

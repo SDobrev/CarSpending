@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="CarSpending.Pages.CurrentPrices"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CarSpending.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="panelTitle"
+              Grid.Row="0"
+              Grid.ColumnSpan="2">
+            <TextBlock Text="Current Prices" 
+                       Style="{StaticResource TitleStyle}"/>
+        </Grid>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <TextBlock FontSize="24" Text="Gasoline A95"/>
+            <TextBlock FontSize="24" Text="Diesel"/>
+            <TextBlock FontSize="24" Text="LPG"/>
+            <TextBlock FontSize="24" Text="Methane"/>
+        </StackPanel>
+        <StackPanel Name="panelContent"
+                    Grid.Row="1"
+                    Grid.Column="1">
+            <TextBlock FontSize="24" x:Name="Gasoline" Text=""/>
+            <TextBlock FontSize="24" x:Name="Diesel" Text=""/>
+            <TextBlock FontSize="24" x:Name="LPG" Text=""/>
+            <TextBlock FontSize="24" x:Name="Methane" Text=""/>
+        </StackPanel>
+       
+        <Grid Name="panelButtons"
+              Grid.Row="2"
+              Grid.ColumnSpan="2">
+            <Button x:Name="GetButton" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="GetButtonClick"/>
+            <Button x:Name="MyVehiclesButton" Content="My Vehicles" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="MyVehiclesButton_Click" Margin="0,50,0,0"/>
+        </Grid>
+    </Grid>
+</Page>

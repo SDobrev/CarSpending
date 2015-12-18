@@ -36,7 +36,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid Name="panelTitle"
               Grid.Row="0">
@@ -51,6 +51,7 @@
         <Grid Name="panelButtons"
               Grid.Row="2">
             <Button x:Name="AddNewCarButton" Content="Add new car" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="AddNewCarButton_Click"/>
+            <Button x:Name="CurrentFuelPricesButton" Content="Fuel Prices" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="CurrentFuelPricesButton_Click" Margin="0,50,0,0"/>
         </Grid>
     </Grid>
 </Page>

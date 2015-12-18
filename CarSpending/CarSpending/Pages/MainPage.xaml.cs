@@ -69,5 +69,10 @@
         {
             this.Frame.Navigate(typeof(AddVehicle));
         }
+
+        private void CurrentFuelPricesButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CurrentPrices));
+        }        
     }
 }

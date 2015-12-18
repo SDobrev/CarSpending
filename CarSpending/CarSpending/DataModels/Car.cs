@@ -1,8 +1,6 @@
 ﻿namespace CarSpending.DataModels
 {
     using SQLite.Net.Attributes;
-    using System.Collections.Generic;
-    using ViewModels;
 
     public class Car
     {
@@ -17,10 +15,5 @@
         public string ImgUrl { get; set; }
 
         public int Year { get; set; }
-
-        public override string ToString()
-        {
-            return $"#{this.Id}; Make: {this.Make}; Model: {this.Model}; ImgUrl: {this.ImgUrl}; Year: {this.Year}";
-        }
     }
 }
