@@ -1,4 +1,4 @@
-﻿namespace CarSpending.DataModels
+﻿namespace CarSpending.Data.Localata.Models
 {
     using System;
     using SQLite.Net.Attributes;

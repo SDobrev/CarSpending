@@ -1,4 +1,4 @@
-﻿//namespace CarSpending.RemoteData
+﻿//namespace CarSpending.Data.RemoteData
 //{
 //    public class FuelPricesGetResponse
 //    {

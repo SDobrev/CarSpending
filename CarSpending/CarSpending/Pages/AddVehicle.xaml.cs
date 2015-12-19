@@ -1,47 +1,22 @@
 ﻿namespace CarSpending.Pages
 {
-    using CarSpending.DataModels;
-    using SQLite.Net;
-    using SQLite.Net.Async;
-    using SQLite.Net.Platform.WinRT;
+    using Data.Localata.Models;
+    using Data.LocalData;
     using System;
-    using System.IO;
-    using System.Threading.Tasks;
-    using Windows.Storage;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
 
     public sealed partial class AddVehicle : Page
     {
+        private LocalData localData;
+
         public AddVehicle()
         {
             this.InitializeComponent();
-            this.InitAsync();
+            this.localData = new LocalData(new LocalDb());
         }
 
-        private SQLiteAsyncConnection GetDbConnectionAsync()
-        {
-            var dbFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "db.sqlite");
-
-            var connectionFactory =
-                new Func<SQLiteConnectionWithLock>(
-                    () =>
-                    new SQLiteConnectionWithLock(
-                        new SQLitePlatformWinRT(),
-                        new SQLiteConnectionString(dbFilePath, storeDateTimeAsTicks: false)));
-
-            var asyncConnection = new SQLiteAsyncConnection(connectionFactory);
-
-            return asyncConnection;
-        }
-
-        private async void InitAsync()
-        {
-            var connection = this.GetDbConnectionAsync();
-            await connection.CreateTablesAsync<Car, OtherExpense, Refueling>();
-        }
-
-        private async void AddCarButtonClick(object sender, RoutedEventArgs e)
+        private void AddCarButtonClick(object sender, RoutedEventArgs e)
         {
             var year = 0;
             string image;
@@ -63,16 +38,11 @@
                 Year = year
             };
 
-            await this.InsertCarAsync(car);
+            this.localData.InsertCar(car);
 
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private async Task<int> InsertCarAsync(Car car)
-        {
-            var connection = this.GetDbConnectionAsync();
-            var result = await connection.InsertAsync(car);
-            return result;
-        }
+  
     }
 }

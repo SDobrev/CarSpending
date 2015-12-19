@@ -1,6 +1,6 @@
 ﻿//using System.Threading.Tasks;
 
-//namespace CarSpending.RemoteData
+//namespace CarSpending.Data.RemoteData
 //{
 //    public interface IData
 //    {

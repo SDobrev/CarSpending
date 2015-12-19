@@ -1,4 +1,4 @@
-﻿namespace CarSpending.DataModels
+﻿namespace CarSpending.Data.Localata.Models
 {
     public enum ExpenseType
     {

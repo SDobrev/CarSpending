@@ -95,16 +95,20 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\LocalData\Repository.cs" />
+    <Compile Include="Data\LocalData\IRepository.cs" />
+    <Compile Include="Data\LocalData\LocalData.cs" />
+    <Compile Include="Data\LocalData\LocalDb.cs" />
     <Compile Include="Pages\AddVehicle.xaml.cs">
       <DependentUpon>AddVehicle.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataModels\Car.cs" />
-    <Compile Include="DataModels\ExpenseType.cs" />
-    <Compile Include="DataModels\OtherExpense.cs" />
-    <Compile Include="DataModels\Refueling.cs" />
+    <Compile Include="Data\LocalData\Models\Car.cs" />
+    <Compile Include="Data\LocalData\Models\ExpenseType.cs" />
+    <Compile Include="Data\LocalData\Models\OtherExpense.cs" />
+    <Compile Include="Data\LocalData\Models\Refueling.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
     <Compile Include="Pages\CurrentPrices.xaml.cs">
@@ -114,10 +118,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoteData\FuelPriceModel.cs" />
-    <Compile Include="RemoteData\FuelPricesGetResponse.cs" />
-    <Compile Include="RemoteData\HttpServerData.cs" />
-    <Compile Include="RemoteData\IData.cs" />
+    <Compile Include="Data\RemoteData\FuelPriceModel.cs" />
+    <Compile Include="Data\RemoteData\FuelPricesGetResponse.cs" />
+    <Compile Include="Data\RemoteData\HttpServerData.cs" />
+    <Compile Include="Data\RemoteData\IData.cs" />
     <Compile Include="ViewModels\IContentViewModel.cs" />
     <Compile Include="ViewModels\IPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
