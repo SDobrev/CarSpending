@@ -2,6 +2,8 @@
 {
     public class VehiclesViewModel : ViewModelBase
     {
+        public int Id { get; set; }
+
         public string Make { get; set; }
 
         public string Model { get; set; }
@@ -12,18 +14,21 @@
 
         public string Name { get; set; }
 
+        public int Fuelings { get; set; }
+
         public VehiclesViewModel()
-            : this(string.Empty, string.Empty, 0, string.Empty)
+            : this(0, string.Empty, string.Empty, 0, string.Empty)
         {
         }
 
         public VehiclesViewModel(VehiclesViewModel newVehicle)
-            : this(newVehicle.Make, newVehicle.Model, newVehicle.Year, newVehicle.ImgUrl)
+            : this(newVehicle.Id, newVehicle.Make, newVehicle.Model, newVehicle.Year, newVehicle.ImgUrl)
         {
         }
 
-        public VehiclesViewModel(string make, string model, int Year, string imgUrl)
+        public VehiclesViewModel(int id, string make, string model, int Year, string imgUrl)
         {
+            this.Id = id;
             this.Make = make;
             this.Model = model;
             this.Year = Year;

@@ -21,6 +21,8 @@
         }
 
         public IRepository<Car> Cars => this.GetLocalRepository<Car>();
+        public IRepository<Fueling> Fuelings => this.GetLocalRepository<Fueling>();
+
 
         public async Task<IEnumerable<Car>> GetAllVehiclesAsync()
         {
@@ -32,8 +34,11 @@
         public void InsertCar(Car car)
         {
             var result = this.Cars.AddAsync(car);
-            //var connection = this.GetDbConnectionAsync();
-            //var result = await connection.InsertAsync(car);
+        }
+
+        public void InsertFueling(Fueling fueling)
+        {
+            var result = this.Fuelings.AddAsync(fueling);
         }
 
         private IRepository<T> GetLocalRepository<T>() where T : class

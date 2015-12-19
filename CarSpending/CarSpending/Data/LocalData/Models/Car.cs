@@ -1,6 +1,8 @@
 ﻿namespace CarSpending.Data.Localata.Models
 {
     using SQLite.Net.Attributes;
+    using SQLiteNetExtensions.Attributes;
+    using System.Collections.Generic;
 
     public class Car
     {
@@ -15,5 +17,8 @@
         public string ImgUrl { get; set; }
 
         public int Year { get; set; }
+
+        [OneToMany]
+        public List<Fueling> Refuelings { get; set; }
     }
 }

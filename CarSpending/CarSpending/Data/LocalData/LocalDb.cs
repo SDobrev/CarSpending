@@ -14,7 +14,7 @@
         public async void InitAsync()
         {
             var connection = this.GetDbConnectionAsync();
-            await connection.CreateTablesAsync<Car, OtherExpense, Refueling>();
+            await connection.CreateTablesAsync<Car, OtherExpense, Fueling>();
         }
 
         public SQLiteAsyncConnection GetDbConnectionAsync()

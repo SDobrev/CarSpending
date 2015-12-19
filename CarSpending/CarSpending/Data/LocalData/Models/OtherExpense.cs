@@ -9,6 +9,8 @@
         [AutoIncrement]
         public int Id { get; set; }
 
+        public int CarId { get; set; }
+
         public decimal Price { get; set; }
 
         public DateTime Date { get; set; }

@@ -25,7 +25,7 @@
                 <TextBlock Text="{Binding Name}"
                                        Grid.Row="0"
                                        Grid.Column="1"/>
-                <TextBlock Text="Avg Cons: 8.4/100"
+                <TextBlock Text="{Binding Fuelings}"
                                        Grid.Row="1"
                                        Grid.Column="1"/>
             </Grid>
@@ -46,7 +46,8 @@
         <Grid Name="panelContent"
               Grid.Row="1">
             <ListBox ItemsSource="{Binding ContentViewModel.Vehicles}"
-                     ItemTemplate="{StaticResource vehicleTemplate}"/>
+                     ItemTemplate="{StaticResource vehicleTemplate}"
+                     Tapped="ListBox_Tapped"/>
         </Grid>
         <Grid Name="panelButtons"
               Grid.Row="2">

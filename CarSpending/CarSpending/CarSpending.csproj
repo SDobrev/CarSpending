@@ -99,6 +99,9 @@
     <Compile Include="Data\LocalData\IRepository.cs" />
     <Compile Include="Data\LocalData\LocalData.cs" />
     <Compile Include="Data\LocalData\LocalDb.cs" />
+    <Compile Include="Pages\AddFueling.xaml.cs">
+      <DependentUpon>AddFueling.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddVehicle.xaml.cs">
       <DependentUpon>AddVehicle.xaml</DependentUpon>
     </Compile>
@@ -108,7 +111,7 @@
     <Compile Include="Data\LocalData\Models\Car.cs" />
     <Compile Include="Data\LocalData\Models\ExpenseType.cs" />
     <Compile Include="Data\LocalData\Models\OtherExpense.cs" />
-    <Compile Include="Data\LocalData\Models\Refueling.cs" />
+    <Compile Include="Data\LocalData\Models\Fueling.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
     <Compile Include="Pages\CurrentPrices.xaml.cs">
@@ -119,9 +122,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\RemoteData\FuelPriceModel.cs" />
-    <Compile Include="Data\RemoteData\FuelPricesGetResponse.cs" />
-    <Compile Include="Data\RemoteData\HttpServerData.cs" />
-    <Compile Include="Data\RemoteData\IData.cs" />
     <Compile Include="ViewModels\IContentViewModel.cs" />
     <Compile Include="ViewModels\IPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
@@ -150,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\AddFueling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddVehicle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,18 +1,14 @@
-﻿using CarSpending.Data.RemoteData;
-using Newtonsoft.Json;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
-namespace CarSpending.Pages
+﻿namespace CarSpending.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    using Newtonsoft.Json;
+    using System;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+
+    using CarSpending.Data.RemoteData;
+
     public sealed partial class CurrentPrices : Page
     {
         private const string Url = "http://fuelo.net/api/price?key=beb5cdf4554ce11&fuel=";
@@ -49,7 +45,7 @@ namespace CarSpending.Pages
             return rootObject.Price + " " + rootObject.Dimension;
         }
 
-        private void MyVehiclesButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void MyVehiclesButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
