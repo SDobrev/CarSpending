@@ -32,6 +32,7 @@ namespace CarSpending.Pages
             this.InitializeComponent();
         }
 
+        //not working
         private void AddNewFuelingButton_Click(object sender, RoutedEventArgs e)
         {
             int id = 0;
@@ -50,9 +51,7 @@ namespace CarSpending.Pages
                 Price = price,
                 Quantity = quantity,
                 Distance = distance
-            };
-
-         //   this.localData.InsertFueling(fueling);
+            };            
         }
     }
 }

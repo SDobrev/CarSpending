@@ -14,8 +14,6 @@
 
         public string Name { get; set; }
 
-        public int Fuelings { get; set; }
-
         public VehiclesViewModel()
             : this(0, string.Empty, string.Empty, 0, string.Empty)
         {

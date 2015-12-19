@@ -36,6 +36,12 @@
             var result = this.Cars.AddAsync(car);
         }
 
+        public async void DeleteCar(int id)
+        {
+            var carToDell = await this.Cars.GetByIdAsync(id);
+            var result = this.Cars.DeleteAsync(carToDell);
+        }
+
         public void InsertFueling(Fueling fueling)
         {
             var result = this.Fuelings.AddAsync(fueling);

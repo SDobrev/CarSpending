@@ -1,9 +1,9 @@
 ﻿namespace CarSpending.ViewModels
 {
-  public interface IPageViewModel
-  {
-    string Title { get; }
+    public interface IPageViewModel
+    {
+        string Title { get; }
 
-    IContentViewModel ContentViewModel { get; set; }
-  }
+        IContentViewModel ContentViewModel { get; set; }
+    }
 }

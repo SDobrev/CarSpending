@@ -13,6 +13,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150"/>
@@ -28,6 +29,16 @@
                 <TextBlock Text="{Binding Fuelings}"
                                        Grid.Row="1"
                                        Grid.Column="1"/>
+                <Button Content="Add Fueling"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        CommandParameter="{Binding Id}"
+                        Click="AddFuelingButton_Click"/>
+                <Button Content="Delete Vehicle"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        CommandParameter="{Binding Id}"
+                        Click="DeleteButton_Click"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -47,7 +58,7 @@
               Grid.Row="1">
             <ListBox ItemsSource="{Binding ContentViewModel.Vehicles}"
                      ItemTemplate="{StaticResource vehicleTemplate}"
-                     Tapped="ListBox_Tapped"/>
+                     SelectedItem="ListBox_Tapped"/>
         </Grid>
         <Grid Name="panelButtons"
               Grid.Row="2">

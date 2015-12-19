@@ -1,6 +1,7 @@
 ﻿using CarSpending.Data.LocalData;
 using CarSpending.ViewModels;
 using System.Collections.Generic;
+using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -34,12 +35,6 @@ namespace CarSpending.Pages
             this.DataContext = new MainPageViewModel(contentViewModel);
         }
 
-        // not working ..
-        private void ListBox_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(AddFueling));
-        }
-
         private void AddNewCarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AddVehicle));
@@ -48,6 +43,20 @@ namespace CarSpending.Pages
         private void CurrentFuelPricesButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CurrentPrices));
+        }
+
+        private void AddFuelingButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button butt = sender as Button;
+            var vehicleId = butt.CommandParameter;
+            this.Frame.Navigate(typeof(AddFueling), vehicleId);
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button butt = sender as Button;
+            var vehicleId = (int)butt.CommandParameter;
+            this.localData.DeleteCar(vehicleId);
         }
     }
 }
