@@ -19,6 +19,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid Name="panelTitle"
               Grid.Row="0">
@@ -30,9 +31,9 @@
             <TextBox x:Name="MakeTextBox" Grid.Row="0" TextWrapping="Wrap" Text="" PlaceholderText="Make" VerticalAlignment="Top" RenderTransformOrigin="2.593,1.91"/>
             <TextBox x:Name="ModelTextBox" TextWrapping="Wrap" Text="" PlaceholderText="Model" VerticalAlignment="Top" Margin="0,42,0,0"/>
             <TextBox x:Name="YearTextBox" TextWrapping="Wrap" Text="" PlaceholderText="Year" VerticalAlignment="Top" Margin="0,79,0,0"/>
-            <TextBox x:Name="ImgUrlTextBox" TextWrapping="Wrap" Text="" PlaceholderText="ImgUrl" VerticalAlignment="Top" Margin="0,116,0,0"/>
-            <Button x:Name="AddNewCarButton" Background="Orange" Content="Add Vehicle" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="49" Click="AddCarButtonClick" Margin="0,191,0,0"/>
+            <TextBox x:Name="ImgUrlTextBox" TextWrapping="Wrap" Text="" PlaceholderText="ImgUrl" VerticalAlignment="Top" Margin="0,116,0,0"/>          
         </Grid>
+        <Button Grid.Row="2" x:Name="AddNewCarButton" Background="Orange" Content="Add Vehicle" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="100"  Click="AddCarButtonClick" Margin="0, 0, 0, 50"/>
     </Grid>
     <Page.BottomAppBar>
         <AppBar IsSticky="true" IsOpen="true">
