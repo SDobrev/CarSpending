@@ -34,10 +34,10 @@
         <StackPanel Name="panelContent"
                     Grid.Row="1"
                     Grid.Column="1">
-            <TextBlock FontSize="24" x:Name="Gasoline" Text=""/>
-            <TextBlock FontSize="24" x:Name="Diesel" Text=""/>
-            <TextBlock FontSize="24" x:Name="LPG" Text=""/>
-            <TextBlock FontSize="24" x:Name="Methane" Text=""/>
+            <TextBlock FontSize="24" x:Name="Gasoline" Text="0.00"/>
+            <TextBlock FontSize="24" x:Name="Diesel" Text="0.00"/>
+            <TextBlock FontSize="24" x:Name="LPG" Text="0.00"/>
+            <TextBlock FontSize="24" x:Name="Methane" Text="0.00"/>
         </StackPanel>
        
         <Grid Name="panelButtons"

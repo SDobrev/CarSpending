@@ -99,6 +99,8 @@
     <Compile Include="Data\LocalData\IRepository.cs" />
     <Compile Include="Data\LocalData\LocalData.cs" />
     <Compile Include="Data\LocalData\LocalDb.cs" />
+    <Compile Include="Helpers\Notification.cs" />
+    <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Pages\AddFueling.xaml.cs">
       <DependentUpon>AddFueling.xaml</DependentUpon>
     </Compile>
@@ -114,6 +116,9 @@
     <Compile Include="Data\LocalData\Models\Fueling.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
+    <Compile Include="Pages\AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CurrentPrices.xaml.cs">
       <DependentUpon>CurrentPrices.xaml</DependentUpon>
     </Compile>
@@ -158,6 +163,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AppShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CurrentPrices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,7 +184,9 @@
       <Name>SQLite for Universal App Platform</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CustomViews\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

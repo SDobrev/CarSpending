@@ -8,7 +8,7 @@
     using Windows.UI.Xaml.Controls;
 
     using CarSpending.Data.RemoteData;
-
+    using Helpers;
     public sealed partial class CurrentPrices : Page
     {
         private const string Url = "http://fuelo.net/api/price?key=beb5cdf4554ce11&fuel=";
@@ -35,6 +35,8 @@
 
             var methaneString = await this.ReadAsString(Url + "methane");
             this.Methane.Text = methaneString;
+
+            Notification.GetNotification("Success: Fuel prices updated!");
         }
 
         private async Task<string> ReadAsString(string url)
