@@ -6,6 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <ContinuumNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -26,18 +35,18 @@
         </Grid>
         <StackPanel Grid.Row="1"
                     Grid.Column="0">
-            <TextBlock FontSize="24" Text="Gasoline A95"/>
-            <TextBlock FontSize="24" Text="Diesel"/>
-            <TextBlock FontSize="24" Text="LPG"/>
-            <TextBlock FontSize="24" Text="Methane"/>            
+            <TextBlock FontSize="24" Foreground="Orange" Text="Gasoline A95"/>
+            <TextBlock FontSize="24" Foreground="Orange" Text="Diesel"/>
+            <TextBlock FontSize="24" Foreground="Orange" Text="LPG"/>
+            <TextBlock FontSize="24" Foreground="Orange" Text="Methane"/>
         </StackPanel>
         <StackPanel Name="panelContent"
                     Grid.Row="1"
                     Grid.Column="1">
-            <TextBlock FontSize="24" x:Name="Gasoline" Text="0.00"/>
-            <TextBlock FontSize="24" x:Name="Diesel" Text="0.00"/>
-            <TextBlock FontSize="24" x:Name="LPG" Text="0.00"/>
-            <TextBlock FontSize="24" x:Name="Methane" Text="0.00"/>
+            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Gasoline" Text="0.00"/>
+            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Diesel" Text="0.00"/>
+            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="LPG" Text="0.00"/>
+            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Methane" Text="0.00"/>
         </StackPanel>
         <ProgressBar Name="progressBar" Grid.Row="2" Foreground="Orange" FontSize="24" Grid.ColumnSpan="2" IsIndeterminate="True" Visibility="Collapsed" />
         <Grid Name="panelButtons"

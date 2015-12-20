@@ -17,22 +17,23 @@
         public double Consumption { get; set; }
 
         public VehiclesViewModel()
-            : this(0, string.Empty, string.Empty, 0, string.Empty)
+            : this(0, string.Empty, string.Empty, 0, string.Empty, 0)
         {
         }
 
         public VehiclesViewModel(VehiclesViewModel newVehicle)
-            : this(newVehicle.Id, newVehicle.Make, newVehicle.Model, newVehicle.Year, newVehicle.ImgUrl)
+            : this(newVehicle.Id, newVehicle.Make, newVehicle.Model, newVehicle.Year, newVehicle.ImgUrl, newVehicle.Consumption)
         {
         }
 
-        public VehiclesViewModel(int id, string make, string model, int Year, string imgUrl)
+        public VehiclesViewModel(int id, string make, string model, int Year, string imgUrl, double consumption)
         {
             this.Id = id;
             this.Make = make;
             this.Model = model;
             this.Year = Year;
             this.ImgUrl = imgUrl;
+            this.Consumption = consumption;
             this.Name = make + " " + model + " " + Year;
         }
     }

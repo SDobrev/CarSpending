@@ -26,7 +26,8 @@
 
             foreach (var item in vehicles)
             {
-                data.Add(new VehiclesViewModel(item.Id ,item.Make, item.Model, item.Year, item.ImgUrl));
+                var consumption = await localData.GetAvgConsumption(item.Id);
+                data.Add(new VehiclesViewModel(item.Id ,item.Make, item.Model, item.Year, item.ImgUrl, consumption));
             }
             contentViewModel.Vehicles = data;
 

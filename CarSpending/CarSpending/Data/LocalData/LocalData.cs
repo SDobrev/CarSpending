@@ -39,6 +39,30 @@
             return allFuelings;
         }
 
+        public async Task<double> GetAvgConsumption(int carId)
+        {
+            double consumption = 0;
+            var carFuelings = new List<double>();
+            var allFuelings = (await this.Fuelings.GetAllAsync());
+            foreach (var item in allFuelings)
+            {
+                if(item.CarId == carId)
+                {
+                    carFuelings.Add(item.Consumption);
+                }
+            }
+            for (int i = 0; i < carFuelings.Count; i++)
+            {
+                consumption += carFuelings[i];
+            }
+            if(carFuelings.Count == 0)
+            {
+                return 0.00;
+            }
+
+            return consumption / carFuelings.Count;
+        }
+
         public void InsertCar(Car car)
         {
             var result = this.Cars.AddAsync(car);

@@ -35,6 +35,7 @@
                 Price = price,
                 Quantity = quantity,
                 Distance = distance,
+                Consumption = quantity / (distance/100),
                 Date = DateTime.UtcNow
             };
 

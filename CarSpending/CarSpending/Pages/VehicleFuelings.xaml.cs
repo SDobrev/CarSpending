@@ -44,7 +44,7 @@ namespace CarSpending.Pages
                 if(item.CarId == vehicleId)
                 {
                     string date = item.Date.ToString("dd-MMM-yyyy");
-                    data.Add(new FuelingsViewModel(item.Id, item.Quantity, item.Distance, item.Price, date));
+                    data.Add(new FuelingsViewModel(item.Id, item.Quantity, item.Distance, item.Price, date, item.Consumption));
                 }
             }
             contentViewModel.Fuelings = data;
