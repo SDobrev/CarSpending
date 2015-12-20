@@ -44,7 +44,8 @@
             }
 
             Notification.GetNotification("Success: Fueling added");
-            this.localData.InsertFueling(fueling);          
+            this.localData.InsertFueling(fueling);
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

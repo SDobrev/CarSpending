@@ -1,10 +1,9 @@
 ﻿namespace CarSpending.ViewModels
 {
     using CarSpending.Extensions;
-    using Helpers;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Windows.Input;
+
     public class VehiclesContentViewModel : ViewModelBase, IContentViewModel
     {
         public ObservableCollection<VehiclesViewModel> vehicles;

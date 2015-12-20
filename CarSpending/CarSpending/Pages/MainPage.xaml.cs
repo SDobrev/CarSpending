@@ -2,10 +2,11 @@
 {
     using CarSpending.Data.LocalData;
     using CarSpending.ViewModels;
+    using Helpers;
     using System.Collections.Generic;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
-
+    using Windows.UI.Xaml.Input;
     public sealed partial class MainPage : Page
     {
         private LocalData localData;
@@ -54,6 +55,14 @@
             Button butt = sender as Button;
             var vehicleId = (int)butt.CommandParameter;
             this.localData.DeleteCar(vehicleId);
+            Notification.GetNotification("Success: Vehicle deleted!");
+        }
+
+        private void ViewFuelingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button butt = sender as Button;
+            var vehicleId = (int)butt.CommandParameter;
+            this.Frame.Navigate(typeof(VehicleFuelings), vehicleId);
         }
     }
 }

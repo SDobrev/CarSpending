@@ -21,7 +21,7 @@
         <Grid Name="panelTitle"
               Grid.Row="0"
               Grid.ColumnSpan="2">
-            <TextBlock Text="Current Prices" 
+            <TextBlock Text="Current Prices for Bulgaria" 
                        Style="{StaticResource TitleStyle}"/>
         </Grid>
         <StackPanel Grid.Row="1"
@@ -43,7 +43,7 @@
         <Grid Name="panelButtons"
               Grid.Row="2"
               Grid.ColumnSpan="2">
-            <Button x:Name="GetButton" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="GetButtonClick"/>
+            <Button x:Name="GetButton" Background="Orange" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="GetButtonClick"/>
             <Button x:Name="MyVehiclesButton" Content="My Vehicles" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="MyVehiclesButton_Click" Margin="0,50,0,0"/>
         </Grid>
     </Grid>

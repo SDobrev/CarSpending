@@ -20,6 +20,8 @@
 
         public double Distance { get; set; }
 
+        public double Consumption { get; set; }
+
         public DateTime Date { get; set; }
 
         [ManyToOne]

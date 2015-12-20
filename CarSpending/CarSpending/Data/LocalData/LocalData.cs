@@ -3,6 +3,7 @@
     using Localata.Models;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     public class LocalData
     {
@@ -31,6 +32,13 @@
             return allCars;
         }
 
+        public async Task<IEnumerable<Fueling>> GetAllFuelingsAsync()
+        {
+            var allFuelings = (await this.Fuelings.GetAllAsync());
+
+            return allFuelings;
+        }
+
         public void InsertCar(Car car)
         {
             var result = this.Cars.AddAsync(car);
@@ -38,13 +46,19 @@
 
         public async void DeleteCar(int id)
         {
-            var carToDell = await this.Cars.GetByIdAsync(id);
-            var result = this.Cars.DeleteAsync(carToDell);
+            var carToDelele = await this.Cars.GetByIdAsync(id);
+            var result = this.Cars.DeleteAsync(carToDelele);
         }
 
         public void InsertFueling(Fueling fueling)
         {
             var result = this.Fuelings.AddAsync(fueling);
+        }
+
+        public async void DeleteFueling(int id)
+        {
+            var fuelingToDelete = await this.Fuelings.GetByIdAsync(id);
+            var result = this.Fuelings.DeleteAsync(fuelingToDelete);
         }
 
         private IRepository<T> GetLocalRepository<T>() where T : class
