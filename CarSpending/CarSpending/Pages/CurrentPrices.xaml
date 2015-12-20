@@ -59,7 +59,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <AppBarButton Grid.Column="0" x:Name="GetButton" Label="Get Prices"   Click="GetButtonClick"/>
+                <AppBarButton Grid.Column="0" x:Name="GetButton" Label="Get Prices" Icon="Refresh"  Click="GetButtonClick"/>
                 <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles"  Click="MyVehiclesButton_Click"/>
             </Grid>
 
