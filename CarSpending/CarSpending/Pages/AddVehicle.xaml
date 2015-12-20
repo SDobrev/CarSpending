@@ -44,7 +44,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles" Click="MyVehiclesButton_Click"/>
+                <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles" Icon="Back"  Click="MyVehiclesButton_Click"/>
             </Grid>
 
         </AppBar>
