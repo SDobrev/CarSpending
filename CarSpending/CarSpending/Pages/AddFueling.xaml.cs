@@ -50,6 +50,11 @@
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        private void MyVehiclesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);

@@ -52,6 +52,11 @@
             Notification.GetNotification("Success: Vehicle added");
             this.localData.InsertCar(car);
             this.Frame.Navigate(typeof(MainPage));
-        }  
+        }
+
+        private void MyVehiclesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }
