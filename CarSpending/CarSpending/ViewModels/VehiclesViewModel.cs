@@ -14,10 +14,10 @@
 
         public string Name { get; set; }
 
-        public double Consumption { get; set; }
+        public string Consumption { get; set; }
 
         public VehiclesViewModel()
-            : this(0, string.Empty, string.Empty, 0, string.Empty, 0)
+            : this(0, string.Empty, string.Empty, 0, string.Empty, string.Empty)
         {
         }
 
@@ -26,7 +26,7 @@
         {
         }
 
-        public VehiclesViewModel(int id, string make, string model, int Year, string imgUrl, double consumption)
+        public VehiclesViewModel(int id, string make, string model, int Year, string imgUrl, string consumption)
         {
             this.Id = id;
             this.Make = make;

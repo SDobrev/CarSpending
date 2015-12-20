@@ -84,8 +84,7 @@
                         Click="DeleteButton_Click"/>
             </Grid>
         </DataTemplate>
-    </Page.Resources>
-    
+    </Page.Resources>    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>

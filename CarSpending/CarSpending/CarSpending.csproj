@@ -95,9 +95,6 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomViews\CustomButton.xaml.cs">
-      <DependentUpon>CustomButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Data\LocalData\Repository.cs" />
     <Compile Include="Data\LocalData\IRepository.cs" />
     <Compile Include="Data\LocalData\LocalData.cs" />
@@ -118,9 +115,6 @@
     <Compile Include="Data\LocalData\Models\Fueling.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
-    <Compile Include="Pages\AppShell.xaml.cs">
-      <DependentUpon>AppShell.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\CurrentPrices.xaml.cs">
       <DependentUpon>CurrentPrices.xaml</DependentUpon>
     </Compile>
@@ -163,19 +157,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CustomViews\CustomButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\AddFueling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AddVehicle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\AppShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,6 +176,11 @@
     <Page Include="Pages\VehicleFuelings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
   </ItemGroup>
   <ItemGroup>

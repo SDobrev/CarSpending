@@ -96,11 +96,9 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-
                 <AppBarButton Grid.Column="0" x:Name="AddNewCarButton" Label="Add Vehicle"  Icon="Add"  Click="AddNewCarButton_Click"/>
                 <AppBarButton Grid.Column="1" x:Name="CurrentFuelPricesButton" Label="Fuel Prices"   Click="CurrentFuelPricesButton_Click"/>
             </Grid>
-
         </AppBar>
     </Page.BottomAppBar>
 </Page>

@@ -31,7 +31,7 @@ namespace CarSpending.ViewModels
         {
         }
 
-        public FuelingsViewModel(int id, double quantity, double distance, decimal price, string date,double consumption)
+        public FuelingsViewModel(int id, double quantity, double distance, decimal price, string date, double consumption)
         {
             this.Id = id;
             this.Quantity = quantity;
