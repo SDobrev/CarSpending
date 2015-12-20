@@ -39,4 +39,17 @@
             <Button x:Name="AddNewFuelingButton" Background="Orange" Content="Add Fueling" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="49" Click="AddNewFuelingButton_Click" Grid.Row="3" Margin="0,50,0,0"/>
         </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsSticky="true" IsOpen="true">
+            <Grid Margin="8,8,8,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles" />
+            </Grid>
+
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>

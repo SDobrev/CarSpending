@@ -75,7 +75,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid Name="panelTitle"
               Grid.Row="0">
@@ -87,10 +86,21 @@
             <ListBox ItemsSource="{Binding ContentViewModel.Vehicles}"
                      ItemTemplate="{StaticResource vehicleTemplate}"/>
         </Grid>
-        <Grid Name="panelButtons"
-              Grid.Row="2">
-            <Button x:Name="AddNewCarButton" Content="Add new car" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="AddNewCarButton_Click"/>
-            <Button x:Name="CurrentFuelPricesButton" Content="Fuel Prices" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="CurrentFuelPricesButton_Click" Margin="0,50,0,0"/>
-        </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsSticky="true" IsOpen="true">
+            <Grid Margin="8,8,8,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <AppBarButton Grid.Column="0" x:Name="AddNewCarButton" Label="Add Vehicle"  Icon="Add"  Click="AddNewCarButton_Click"/>
+                <AppBarButton Grid.Column="1" x:Name="CurrentFuelPricesButton" Label="Fuel Prices"   Click="CurrentFuelPricesButton_Click"/>
+            </Grid>
+
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>

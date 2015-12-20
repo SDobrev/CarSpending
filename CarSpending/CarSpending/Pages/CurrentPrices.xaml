@@ -21,7 +21,6 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -49,11 +48,21 @@
             <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Methane" Text="0.00"/>
         </StackPanel>
         <ProgressBar Name="progressBar" Grid.Row="2" Foreground="Orange" FontSize="24" Grid.ColumnSpan="2" IsIndeterminate="True" Visibility="Collapsed" />
-        <Grid Name="panelButtons"
-              Grid.Row="3"
-              Grid.ColumnSpan="2">
-            <Button x:Name="GetButton" Background="Orange" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="GetButtonClick"/>
-            <Button x:Name="MyVehiclesButton" Content="My Vehicles" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="MyVehiclesButton_Click" Margin="0,50,0,0"/>
-        </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsSticky="true" IsOpen="true">
+            <Grid Margin="8,8,8,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <AppBarButton Grid.Column="0" x:Name="GetButton" Label="Get Prices"   Click="GetButtonClick"/>
+                <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles"  Click="MyVehiclesButton_Click"/>
+            </Grid>
+
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>

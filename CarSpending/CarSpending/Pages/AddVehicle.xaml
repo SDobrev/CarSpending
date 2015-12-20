@@ -34,4 +34,19 @@
             <Button x:Name="AddNewCarButton" Background="Orange" Content="Add Vehicle" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="49" Click="AddCarButtonClick" Margin="0,191,0,0"/>
         </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsSticky="true" IsOpen="true">
+            <Grid Margin="8,8,8,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles" />
+            </Grid>
+
+        </AppBar>
+    </Page.BottomAppBar>
 </Page> 
