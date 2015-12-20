@@ -4,8 +4,8 @@
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DeviceId>98CD6FA8-9114-4179-ACA3-38E5D23C77EE</DeviceId>
-    <UseEmulator>false</UseEmulator>
+    <DeviceId>F554226E-1E47-460D-B76A-338418AD356B</DeviceId>
+    <UseEmulator>true</UseEmulator>
     <AuthenticationMode>Windows</AuthenticationMode>
     <UseSimulator>false</UseSimulator>
   </PropertyGroup>

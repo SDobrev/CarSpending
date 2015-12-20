@@ -31,39 +31,49 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Quantity: "
                            Grid.Row="0"
-                           Grid.Column="0"/>
+                           Grid.Column="0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="{Binding Quantity}"
                            Grid.Row="0"
                            Grid.Column="1"
-                           Margin="20,0,0,0"/>
+                           Margin="20,0,0,0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="Distance: "
                            Grid.Row="1"
-                           Grid.Column="0"/>
+                           Grid.Column="0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="{Binding Distance}"
                            Grid.Row="1"
                            Grid.Column="1"
-                           Margin="20,0,0,0"/>
+                           Margin="20,0,0,0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="Date: "
                            Grid.Row="2"
-                           Grid.Column="0"/>
+                           Grid.Column="0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="{Binding Date}"
                            Grid.Row="2"
                            Grid.Column="1"
-                           Margin="20,0,0,0"/>
+                           Margin="20,0,0,0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="Price: "
                            Grid.Row="3"
-                           Grid.Column="0"/>
+                           Grid.Column="0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="{Binding Price}"
                            Grid.Row="3"
                            Grid.Column="1"
-                           Margin="20,0,0,0"/>
-                <TextBlock Text="Consumption l/100: "
+                           Margin="20,0,0,0"
+                           FontSize="24" Foreground="Orange"/>
+                <TextBlock Text="Cons. l/100: "
                            Grid.Row="4"
-                           Grid.Column="0"/>
+                           Grid.Column="0"
+                           FontSize="24" Foreground="Orange"/>
                 <TextBlock Text="{Binding Consumption}"
                            Grid.Row="4"
                            Grid.Column="1"                           
-                           Margin="20,0,0,0"/>
+                           Margin="20,0,0,0"
+                           FontSize="24" Foreground="Orange"/>
                 <Button Content="Delete Fueling"
                         Grid.Row="5"
                         Grid.Column="0"
@@ -94,7 +104,7 @@
         </Grid>
         <Grid Name="panelButtons"
               Grid.Row="2">
-            <Button x:Name="MyCarsButton" Content="My Cars" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Click="MyCarsButton_Click"/>
+            <Button x:Name="MyCarsButton" Background="Orange" Content="My Cars" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="70" Click="MyCarsButton_Click"/>
         </Grid>
     </Grid>
 </Page>

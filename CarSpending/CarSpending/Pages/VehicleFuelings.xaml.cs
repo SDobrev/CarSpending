@@ -37,7 +37,8 @@ namespace CarSpending.Pages
         {
             var contentViewModel = new FuelingsViewModel();
             var data = new List<FuelingsViewModel>();
-            var vehicles = await localData.GetAllFuelingsAsync();
+            var vehicles = (await localData.GetAllFuelingsAsync())
+                .OrderByDescending(v => v.Date);
 
             foreach (var item in vehicles)
             {

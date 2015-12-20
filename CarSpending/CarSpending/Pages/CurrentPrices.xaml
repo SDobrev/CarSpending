@@ -49,7 +49,7 @@
             <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Methane" Text="0.00"/>
         </StackPanel>
         <ProgressBar Name="progressBar" Grid.Row="2" Foreground="Orange" FontSize="24" Grid.ColumnSpan="2" IsIndeterminate="True" Visibility="Collapsed" />
-        <Button Grid.ColumnSpan="2" Grid.Row="3" x:Name="RefreshButton" Background="Orange" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="100"  Click="GetButtonClick" Margin="0, 0, 0, 50"/>
+        <Button Grid.ColumnSpan="2" Grid.Row="3" x:Name="RefreshButton" Background="Orange" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"  Click="GetButtonClick" Margin="0, 0, 0, 50"/>
     </Grid>
     <Page.BottomAppBar>
         <AppBar IsSticky="true" IsOpen="true">
