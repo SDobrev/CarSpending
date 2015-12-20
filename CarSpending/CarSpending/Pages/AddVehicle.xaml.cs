@@ -19,16 +19,14 @@
 
         private void AddCarButtonClick(object sender, RoutedEventArgs e)
         {
-            //validate
             var year = 0;
             string make = this.MakeTextBox.Text;
             string model = this.ModelTextBox.Text;
             string image;
-
-            //get from local
+            
             if (this.ImgUrlTextBox.Text == string.Empty)
             {
-                image = "http://www.eztriplimo.com/wp-content/plugins/limollabs-service/themes/default/img/default-car.jpg";
+                image = "ms-appx:///Assets/default-car.jpg";
             }
             else
             {
@@ -45,9 +43,10 @@
                 Year = year
             };
             
-            if (false)
+            if (make.Length == 0 && model.Length == 0)
             {
-                Notification.GetNotification("Error: .....");              
+                Notification.GetNotification("Error: Please fill make or model text");
+                return;         
             }
 
             Notification.GetNotification("Success: Vehicle added");

@@ -38,9 +38,10 @@
                 Date = DateTime.UtcNow
             };
 
-            if (false)
+            if (quantity == 0 || distance == 0)
             {
-                Notification.GetNotification("Error: .....");
+                Notification.GetNotification("Error: Invalid Quantity or Distance!");
+                return;
             }
 
             Notification.GetNotification("Success: Fueling added");

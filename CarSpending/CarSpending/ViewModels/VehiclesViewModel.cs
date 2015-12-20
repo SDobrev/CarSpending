@@ -14,6 +14,8 @@
 
         public string Name { get; set; }
 
+        public double Consumption { get; set; }
+
         public VehiclesViewModel()
             : this(0, string.Empty, string.Empty, 0, string.Empty)
         {

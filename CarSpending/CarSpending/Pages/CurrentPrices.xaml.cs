@@ -41,9 +41,11 @@
 
         private async Task<string> ReadAsString(string url)
         {
+            this.progressBar.Visibility = Visibility.Visible;
             var response = await this.httpClient.GetAsync(new Uri(url));
             var result = await response.Content.ReadAsStringAsync();
             var rootObject = JsonConvert.DeserializeObject<FuelPriceModel>(result);
+            this.progressBar.Visibility = Visibility.Collapsed;
             return rootObject.Price + " " + rootObject.Dimension;
         }
 

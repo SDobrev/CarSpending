@@ -17,24 +17,27 @@ namespace CarSpending.ViewModels
 
         public decimal Price { get; set; }
 
-       public double Consumption { get; set; }
+        public double Consumption { get; set; }
+
+        public string Date { get; set; }
 
         public FuelingsViewModel()
-            : this(0, 0, 0, 0)
+            : this(0, 0, 0, 0, string.Empty)
         {
         }
 
         public FuelingsViewModel(FuelingsViewModel newFueling)
-            : this(newFueling.Id, newFueling.Quantity, newFueling.Distance, newFueling.Price)
+            : this(newFueling.Id, newFueling.Quantity, newFueling.Distance, newFueling.Price, newFueling.Date)
         {
         }
 
-        public FuelingsViewModel(int id, double quantity, double distance, decimal price)
+        public FuelingsViewModel(int id, double quantity, double distance, decimal price, string date)
         {
             this.Id = id;
             this.Quantity = quantity;
             this.Distance = distance;
             this.Price = price;
+            this.Date = date;
             this.Consumption = quantity / (distance / 100);
         }
 

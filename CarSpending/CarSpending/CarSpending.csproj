@@ -95,12 +95,14 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomViews\CustomButton.xaml.cs">
+      <DependentUpon>CustomButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Data\LocalData\Repository.cs" />
     <Compile Include="Data\LocalData\IRepository.cs" />
     <Compile Include="Data\LocalData\LocalData.cs" />
     <Compile Include="Data\LocalData\LocalDb.cs" />
     <Compile Include="Helpers\Notification.cs" />
-    <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Pages\AddFueling.xaml.cs">
       <DependentUpon>AddFueling.xaml</DependentUpon>
     </Compile>
@@ -146,6 +148,7 @@
     <None Include="CarSpending_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\default-car.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CustomViews\CustomButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddFueling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,9 +200,7 @@
       <Name>SQLite for Universal App Platform</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CustomViews\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
