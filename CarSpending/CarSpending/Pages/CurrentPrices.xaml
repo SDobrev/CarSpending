@@ -35,21 +35,60 @@
         </Grid>
         <StackPanel Grid.Row="1"
                     Grid.Column="0">
-            <TextBlock FontSize="24" Foreground="Orange" Text="Gasoline A95"/>
-            <TextBlock FontSize="24" Foreground="Orange" Text="Diesel"/>
-            <TextBlock FontSize="24" Foreground="Orange" Text="LPG"/>
-            <TextBlock FontSize="24" Foreground="Orange" Text="Methane"/>
+            <TextBlock FontSize="24"
+                       Foreground="Orange" 
+                       Text="Gasoline A95"/>
+            <TextBlock FontSize="24" 
+                       Foreground="Orange"
+                       Text="Diesel"/>
+            <TextBlock FontSize="24"
+                       Foreground="Orange"
+                       Text="LPG"/>
+            <TextBlock FontSize="24" 
+                       Foreground="Orange"
+                       Text="Methane"/>
         </StackPanel>
         <StackPanel Name="panelContent"
                     Grid.Row="1"
                     Grid.Column="1">
-            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Gasoline" Text="0.00"/>
-            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Diesel" Text="0.00"/>
-            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="LPG" Text="0.00"/>
-            <TextBlock FontSize="24" Foreground="Orange" FontWeight="Bold" x:Name="Methane" Text="0.00"/>
+            <TextBlock FontSize="24"
+                       Foreground="Orange"
+                       FontWeight="Bold"
+                       x:Name="Gasoline" 
+                       Text="0.00"/>
+            <TextBlock FontSize="24"
+                       Foreground="Orange"
+                       FontWeight="Bold"
+                       x:Name="Diesel" 
+                       Text="0.00"/>
+            <TextBlock FontSize="24"
+                       Foreground="Orange"
+                       FontWeight="Bold" 
+                       x:Name="LPG"
+                       Text="0.00"/>
+            <TextBlock FontSize="24"
+                       Foreground="Orange" 
+                       FontWeight="Bold"
+                       x:Name="Methane" 
+                       Text="0.00"/>
         </StackPanel>
-        <ProgressBar Name="progressBar" Grid.Row="2" Foreground="Orange" FontSize="24" Grid.ColumnSpan="2" IsIndeterminate="True" Visibility="Collapsed" />
-        <Button Grid.ColumnSpan="2" Grid.Row="3" x:Name="RefreshButton" Background="Orange" Content="Get Prices" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"  Click="GetButtonClick" Margin="0, 0, 0, 50"/>
+        <ProgressBar Name="progressBar" 
+                     Grid.Row="2" 
+                     Foreground="Orange" 
+                     FontSize="24"
+                     Grid.ColumnSpan="2"
+                     IsIndeterminate="True"
+                     Visibility="Collapsed" />
+        <Button Grid.ColumnSpan="2"
+                Grid.Row="3"
+                x:Name="RefreshButton"
+                Background="Orange"
+                Content="Get Prices" 
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" 
+                Height="70" 
+                Click="GetButtonClick" 
+                Margin="0, 0, 0, 50"/>
     </Grid>
     <Page.BottomAppBar>
         <AppBar IsSticky="true" IsOpen="true">
@@ -59,9 +98,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <AppBarButton Grid.Column="0" x:Name="MyVehiclesButton" Label="My Vehicles"  Icon="Back" Click="MyVehiclesButton_Click"/>               
+                <AppBarButton Grid.Column="0"
+                              x:Name="MyVehiclesButton"
+                              Label="My Vehicles" 
+                              Icon="Back"
+                              Click="MyVehiclesButton_Click"/>               
             </Grid>
-
         </AppBar>
     </Page.BottomAppBar>
 </Page>

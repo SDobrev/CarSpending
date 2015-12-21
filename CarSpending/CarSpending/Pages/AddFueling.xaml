@@ -33,9 +33,30 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="QuantityTextBox" BorderBrush="Orange" TextWrapping="Wrap" Text="" PlaceholderText="Quantity" VerticalAlignment="Top" Grid.Row="0" Margin="0,11,0,0" />
-            <TextBox x:Name="DistanceTextBox" BorderBrush="Orange" TextWrapping="Wrap" Text="" PlaceholderText="Distance" VerticalAlignment="Top" Grid.Row="1" Margin="0,11,0,0" />
-            <TextBox x:Name="PriceTextBox" BorderBrush="Orange" TextWrapping="Wrap" Text="" PlaceholderText="Price" VerticalAlignment="Top" Grid.Row="2" Margin="0,11,0,0"/>
+            <TextBox x:Name="QuantityTextBox"
+                     BorderBrush="Orange"
+                     TextWrapping="Wrap" 
+                     Text=""
+                     PlaceholderText="Quantity" 
+                     VerticalAlignment="Top" 
+                     Grid.Row="0" 
+                     Margin="0,11,0,0" />
+            <TextBox x:Name="DistanceTextBox"
+                     BorderBrush="Orange"
+                     TextWrapping="Wrap" 
+                     Text=""
+                     PlaceholderText="Distance"
+                     VerticalAlignment="Top"
+                     Grid.Row="1"
+                     Margin="0,11,0,0" />
+            <TextBox x:Name="PriceTextBox"
+                     BorderBrush="Orange"
+                     TextWrapping="Wrap" 
+                     Text=""
+                     PlaceholderText="Price"
+                     VerticalAlignment="Top"
+                     Grid.Row="2"
+                     Margin="0,11,0,0"/>
             <Button Content="Add Fueling" 
                     Click="AddNewFuelingButton_Click" 
                     Grid.Row="3"
@@ -50,7 +71,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <AppBarButton Grid.Column="1" x:Name="MyVehiclesButton" Label="My Vehicles" Click="MyVehiclesButton_Click"/>
+                <AppBarButton Grid.Column="1" 
+                              x:Name="MyVehiclesButton"
+                              Label="My Vehicles" 
+                              Click="MyVehiclesButton_Click"/>
             </Grid>
         </AppBar>
     </Page.BottomAppBar>

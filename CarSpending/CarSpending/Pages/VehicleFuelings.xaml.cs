@@ -71,5 +71,10 @@ namespace CarSpending.Pages
             base.OnNavigatedTo(e);
             this.vehicleId = int.Parse(e.Parameter.ToString());
         }
+
+        private void MyVehiclesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

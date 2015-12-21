@@ -89,7 +89,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
         <Grid Name="panelTitle"
               Grid.Row="0">
@@ -103,7 +103,30 @@
         </Grid>
         <Grid Name="panelButtons"
               Grid.Row="2">
-            <Button x:Name="MyCarsButton" Background="Orange" Content="My Cars" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="70" Click="MyCarsButton_Click"/>
+            <Button x:Name="MyCarsButton" 
+                    Background="Orange"
+                    Content="My Cars"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top" 
+                    Height="70"
+                    Click="MyCarsButton_Click"/>
         </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsSticky="true" IsOpen="true">
+            <Grid Margin="8,8,8,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <AppBarButton Grid.Column="1"
+                              x:Name="MyVehiclesButton"
+                              Label="My Vehicles"
+                              Icon="Back" 
+                              Click="MyVehiclesButton_Click"/>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>
